@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+/*Variables*/
+$veryDarkMagenta: hsl(300, 43%, 22%);
+$softPink: hsl(333, 80%, 67%);
+$darkGrayishMagenta: hsl(303, 10%, 53%);
+$lightGrayishMagenta: hsl(300, 24%, 96%);
+$white:hsl(0, 0%, 100%);
+$fontSize: 0.9375rem; /*15px*/
+$smallWeight: 400;
+$mediumWeight: 500;
+$heavyWeight: 700;
+
+*{
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+    line-height: 1.5rem; /*24px*/
+}
+
+body{
+    background-image: url('./images/bg-pattern-top-mobile.svg'), url('./images/bg-pattern-bottom-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: left 0vw top 0vh, right 0vh bottom 0vh;
+}
+
+main{
+    margin: 5.3125rem 1.125rem 0rem 1.125rem; /*85px 18px 0px 18px*/
+}
+
+.main_container{
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    line-height: 1.9375rem; /*31px*/
+}
+
+.h1_text{
+    text-align: center;
+    color: $veryDarkMagenta;
+    padding: 0rem  1.25rem 0rem 1.25rem; /*20px*/
+}
+
+.paragraph{
+    text-align: center;
+    font-size: $fontSize;
+    margin-top: 1.625rem; /*26px*/
+    color: $darkGrayishMagenta;
+    font-weight: $mediumWeight;
+}
+
+.testimonials{
+    margin: 3.125rem 0rem 3.125rem 0rem; /*50px 0px 0px 50px*/
+}
+
+.review{
+    background-color: $lightGrayishMagenta;
+    border-radius: 0.625rem; /*10px*/
+    height: 4.75rem; /*76px*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    &_text{
+        font-size: $fontSize;
+        color: $veryDarkMagenta;
+        font-weight: $heavyWeight;
+    }
+}
+
+.review.one, .review.two{
+    margin-bottom: 1.25rem; /*20px*/
+}
+
+.buyer{
+    background-color: $veryDarkMagenta;
+    font-size: 0.8125rem; /*13px*/
+    border-radius: 0.625rem; /*10px*/
+    padding: 2.0625rem; /*33px*/
+    &.one{
+        margin-bottom: 1.25rem; /*20px*/
+    }
+
+    &.two{
+        margin-bottom: 1.25rem; /*20px*/
+    }
+
+    &_top{
+        display: flex;
+        margin-bottom: 1.5625rem; /*25px*/
+    }
+
+    &_name{
+        color: $white;
+        font-weight: $heavyWeight;
+    }
+
+    &_description{
+        color: $softPink;
+    }
+    &_text{
+        color: $white;
+        font-weight: $mediumWeight;
+    }
+
+    &_info{
+        flex: 3;
+        display: inline-block;
+    }
+}
+.avatar{
+    flex: 1;
+    display: inline-block;
+
+    & img{
+        height: 3.125rem; /*50px*/
+        width: 3.125rem; /*50px*/
+        border-radius: 3.125rem; /*50px*/
+    }
+}
+
+.attribution{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.25rem; /*36px*/
+    justify-content: center;
+    align-items: center;
+    height: 6.25rem; /*100px*/
+    color: $veryDarkMagenta;
+    font-weight: $heavyWeight;
+    
+    & a{
+        color: $veryDarkMagenta;
+    }
+}
+
+@media (min-width: 64.0625rem){
+    body{
+        background-image: url('./images/bg-pattern-top-desktop.svg'), url('./images/bg-pattern-bottom-desktop.svg');
+        background-repeat: no-repeat;
+        background-position: right 62vw top 0vh, left 55vh bottom 0vh;
+    }
+    main{
+        margin: 8.75rem 8.75rem 0rem 8.75rem ;/*140px 140px 0px 140px*/
+    }
+
+    .main_container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 1.5625rem ;  /*25px*/
+    }
+
+    .intro{
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+
+    .h1_text{
+        padding: 0rem;
+        font-size: 1.25rem; /*20px*/
+        text-align: left;
+        width: 20.375rem ;/*326px*/
+
+        & h1{
+            line-height: 2.5625rem; /*41px*/
+        }
+    }
+
+    .paragraph {
+        text-align: left;
+        font-size: $fontSize;
+        margin-top: 0.625rem; /*10px*/
+        width: 28.375rem ;/*454px*/
+    }
+
+    .testimonials {
+        grid-column: 2/4;
+        grid-row: 1/2;
+        margin: 0rem;
+        justify-self: end;
+    }
+
+    .review{
+        flex-direction: row;
+        height: 3.125rem; /*50px*/
+        width: 25rem; /*400px*/
+
+        &.two{
+            margin-left: 3.125rem; /*50px*/
+        }
+
+        &.three{
+            margin-left: 6.25rem; /*100px*/
+        }
+    }
+
+    .buyer{
+        max-width: 23.125rem; /*370px*/
+        max-height: 15.3125rem; /*245px*/
+        &.one{
+            margin-bottom: 0rem; /*0px*/
+        }
+    
+        &.two{
+            margin-bottom: 0rem; /*0px*/
+            margin-top: 1.625rem;  /*26px*/
+        }
+
+        &.three{
+            margin-top: 3.25rem;  /*52px*/
+        }
+    }
+
+    .attribution{
+        flex-direction: row;
+    }
+}
+    
+
