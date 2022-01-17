@@ -20,7 +20,7 @@ $heavyWeight: 700;
 }
 
 body{
-    background-image: url("/images/bg-pattern-top-mobile.svg"), url("/images/bg-pattern-bottom-mobile.svg");
+    background-image: url("./images/bg-pattern-top-mobile.svg"), url("./images/bg-pattern-bottom-mobile.svg");
     background-repeat: no-repeat;
     background-position: left 0vw top 0vh, right 0vh bottom 0vh;
 }
@@ -140,7 +140,7 @@ h1{
 
 @media (min-width: 64.0625rem){
     body{
-        background-image: url("/images/bg-pattern-top-desktop.svg"), url("/images/bg-pattern-bottom-desktop.svg");
+        background-image: url("./images/bg-pattern-top-desktop.svg"), url("./images/bg-pattern-bottom-desktop.svg");
         background-repeat: no-repeat;
         background-position: right 62vw top 0vh, left 55vh bottom 0vh;
     }
